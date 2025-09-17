@@ -25,6 +25,13 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\Translations\**\*" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
 
 	<ItemGroup>
 		<ScFilesToTransform Include="appsettings.json">
@@ -45,6 +52,10 @@
 			<DestinationFile>appsettings.*.json</DestinationFile>
 			<!-- Specify the destination file -->
 		</ScFilesToTransform>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\" />
 	</ItemGroup>
 
 	<Target Name="TransformConfig" AfterTargets="Build">

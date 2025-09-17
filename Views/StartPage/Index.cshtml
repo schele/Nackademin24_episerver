@@ -1,5 +1,11 @@
-﻿@using nackademin24_episerver.Models.ViewModels
+﻿@using EPiServer.Web.Mvc.Html
+@using nackademin24_episerver.Models.ViewModels
 
 @model StartPageViewModel
 
 <h1>@Model.CurrentPage.Heading</h1>
+
+<h2>@Html.PropertyFor(x => x.CurrentPage.Preamble)</h2>
+<p>@Html.Raw(Model.CurrentPage.MainBody)</p>
+
+<img src="@Url.ContentUrl(Model.CurrentPage.Image)" />
