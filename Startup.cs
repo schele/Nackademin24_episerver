@@ -15,14 +15,6 @@ namespace nackademin24_episerver
             _webHostingEnvironment = webHostingEnvironment;
         }
 
-        public static IConfiguration Configuration { get; } =
-            new ConfigurationBuilder()
-            .AddJsonFile("appSettings.json", false, true)
-            .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", true, true)
-            .AddJsonFile($"appsettings.{Environment.MachineName}.json", true, true)
-            .AddEnvironmentVariables()
-            .Build();
-
         public void ConfigureServices(IServiceCollection services)
         {
             if (_webHostingEnvironment.IsDevelopment())
