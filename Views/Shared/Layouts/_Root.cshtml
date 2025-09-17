@@ -1,0 +1,19 @@
+﻿@using nackademin24_episerver.Models.Pages
+@using nackademin24_episerver.Models.ViewModels
+
+@model IPageViewModel<SitePageData>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <meta name="description" value="@Model.CurrentPage.MetaDescription" />
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
