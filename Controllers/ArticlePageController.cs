@@ -2,7 +2,7 @@
 using nackademin24_episerver.Models.Pages;
 using nackademin24_episerver.Models.ViewModels;
 
-namespace nackademin24_episerver.Controller
+namespace nackademin24_episerver.Controllers
 {
     public class ArticlePageController : PageControllerBase<ArticlePage>
     {

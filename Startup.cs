@@ -1,4 +1,5 @@
 using EPiServer.Cms.Shell;
+using EPiServer.Cms.Shell.UI.Configurations;
 using EPiServer.Cms.UI.AspNetIdentity;
 using EPiServer.Scheduler;
 using EPiServer.ServiceLocation;
@@ -29,6 +30,10 @@ namespace nackademin24_episerver
                 .AddCms()
                 .AddAdminUserRegistration()
                 .AddEmbeddedLocalization<Startup>();
+
+            services.Configure<UploadOptions>(x => { x.FileSizeLimit = 52428800; });
+
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
