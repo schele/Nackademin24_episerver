@@ -1,5 +1,6 @@
 ﻿using EPiServer.Web;
 using nackademin24_episerver.Business;
+using nackademin24_episerver.Models.Blocks;
 using System.ComponentModel.DataAnnotations;
 
 namespace nackademin24_episerver.Models.Pages
@@ -47,7 +48,7 @@ namespace nackademin24_episerver.Models.Pages
             Order = 50
         )]
         [CultureSpecific]
-        [AllowedTypes(typeof(CarouselPage))]
+        [AllowedTypes(typeof(CarouselPage), typeof(CarouselBlock))]
         public virtual ContentArea Carousel { get; set; }
     }
 }
