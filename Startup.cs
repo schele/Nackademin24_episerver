@@ -4,6 +4,8 @@ using EPiServer.Cms.UI.AspNetIdentity;
 using EPiServer.Scheduler;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Routing;
+using nackademin24_episerver.Business.Services;
+using nackademin24_episerver.Business.Services.Interfaces;
 
 namespace nackademin24_episerver
 {
@@ -32,8 +34,7 @@ namespace nackademin24_episerver
                 .AddEmbeddedLocalization<Startup>();
 
             services.Configure<UploadOptions>(x => { x.FileSizeLimit = 52428800; });
-
-
+            services.AddScoped<IDescendantService, DescendantService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

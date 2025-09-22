@@ -1,4 +1,6 @@
 ﻿using nackademin24_episerver.Business;
+using nackademin24_episerver.Business.Attributes;
+using nackademin24_episerver.Business.Enums;
 using System.ComponentModel.DataAnnotations;
 
 namespace nackademin24_episerver.Models.Pages

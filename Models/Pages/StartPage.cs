@@ -41,5 +41,13 @@ namespace nackademin24_episerver.Models.Pages
         )]
         [UIHint(UIHint.Image)]
         public virtual ContentReference Image { get; set; }
+
+        [Display(
+            GroupName = SystemTabNames.Content,
+            Order = 50
+        )]
+        [CultureSpecific]
+        [AllowedTypes(typeof(CarouselPage))]
+        public virtual ContentArea Carousel { get; set; }
     }
 }
