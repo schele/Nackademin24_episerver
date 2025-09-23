@@ -32,7 +32,6 @@ namespace nackademin24_episerver.Business.ScheduledJobs
             _stopSignaled = true;
         }
 
-
         public override string Execute()
         {
             var carouselPages = GetCarouselPages();
@@ -50,7 +49,7 @@ namespace nackademin24_episerver.Business.ScheduledJobs
 
             if (_stopSignaled)
             {
-                return $"The joba has been cancelled";
+                return $"The job has been cancelled";
             }
 
             return $"Unpublished carousel pages deleted: {status}";
