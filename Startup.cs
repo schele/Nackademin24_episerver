@@ -35,6 +35,7 @@ namespace nackademin24_episerver
 
             services.Configure<UploadOptions>(x => { x.FileSizeLimit = 52428800; });
             services.AddScoped<IDescendantService, DescendantService>();
+            services.AddScoped<IXmlSitemapService, XmlSitemapService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

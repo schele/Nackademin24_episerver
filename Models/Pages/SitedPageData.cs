@@ -20,5 +20,13 @@ namespace nackademin24_episerver.Models.Pages
             }
             set => this.SetPropertyValue(p => p.MetaDescription, value);
         }
+
+        [Display(
+            GroupName = SystemTabNames.Settings,
+            Order = 10
+        )]
+        [Editable(false)]
+        [CultureSpecific]
+        public virtual DateTime? XmlSitemapDate { get; set; }
     }
 }
