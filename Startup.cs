@@ -54,6 +54,16 @@ namespace nackademin24_episerver
             {
                 endpoints.MapContent();
             });
+
+            app.UseStatusCodePages(async context =>
+            {
+                if (context.HttpContext.Response.StatusCode == 404)
+                {
+                    context.HttpContext.Response.Redirect("/error");
+
+                    await Task.Yield();
+                }
+            });
         }
     }
 }
